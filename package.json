@@ -1,0 +1,24 @@
+{
+  "name": "whisper-transcriber",
+  "version": "1.0.0",
+  "description": "Hangfájlok szöveggé alakítása OpenAI Whisper API segítségével",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=8192 index.js"
+  },
+  "keywords": [
+    "openai",
+    "whisper",
+    "transcription"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.0",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  },
+  "type": "module"
+} 

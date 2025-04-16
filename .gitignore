@@ -1,0 +1,27 @@
+# Függőségek
+node_modules/
+package-lock.json
+
+# Környezeti változók
+.env
+
+# Generált kimenetek
+transcriptions/
+
+# Feltöltött hangfájlok (opcionális)
+source/
+
+# IDE-k és operációs rendszerek
+.DS_Store
+.vscode/
+.cursor/
+.idea/
+*.swp
+*.swo
+
+# Logok és ideiglenes fájlok
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* 
