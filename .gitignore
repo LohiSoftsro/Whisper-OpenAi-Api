@@ -1,17 +1,17 @@
-# Függőségek
+# Dependencies
 node_modules/
 package-lock.json
 
-# Környezeti változók
+# Environment variables
 .env
 
-# Generált kimenetek
+# Generated outputs
 transcriptions/
 
-# Feltöltött hangfájlok (opcionális)
-source/
+# Uploaded audio files (optional)
+# source/
 
-# IDE-k és operációs rendszerek
+# IDEs and operating systems
 .DS_Store
 .vscode/
 .cursor/
@@ -19,7 +19,7 @@ source/
 *.swp
 *.swo
 
-# Logok és ideiglenes fájlok
+# Logs and temporary files
 logs
 *.log
 npm-debug.log*

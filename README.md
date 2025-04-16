@@ -1,71 +1,71 @@
-# Whisper Hangfelismerő Alkalmazás
+# Whisper Audio Transcription App
 
-Ez az alkalmazás az OpenAI Whisper API-t használja hangfájlok szöveggé alakítására.
+This application uses the OpenAI Whisper API to convert audio files to text.
 
-## Telepítés
+## Installation
 
-1. Klónozd le ezt a repositoryt:
+1. Clone this repository:
    ```
-   git clone [repository URL]
-   cd whisper-transcriber
+   git clone https://github.com/LohiSoftsro/Whisper-OpenAi-Api.git
+   cd Whisper-OpenAi-Api
    ```
 
-2. Telepítsd a függőségeket:
+2. Install dependencies:
    ```
    npm install
    ```
 
-3. Hozz létre egy `.env` fájlt az OpenAI API kulcsoddal:
+3. Create a `.env` file with your OpenAI API key:
    ```
    cp .env.example .env
    ```
    
-   Szerkeszd a `.env` fájlt és add meg a saját OpenAI API kulcsodat:
+   Edit the `.env` file and enter your own OpenAI API key:
    ```
    OPENAI_API_KEY=your_openai_api_key_here
    ```
 
-## Használat
+## Usage
 
-1. Helyezd a feldolgozni kívánt hangfájlokat a `source` mappába.
+1. Place the audio files you want to process in the `source` folder.
    
-   Támogatott formátumok: `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.wav`, `.webm`
+   Supported formats: `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.wav`, `.webm`
 
-2. Futtasd az alkalmazást:
+2. Run the application:
    ```
    npm start
    ```
 
-3. A feldolgozott átiratokat a `transcriptions` mappában találod meg `.txt` formátumban.
+3. You will find the processed transcripts in the `transcriptions` folder in `.txt` format.
 
-### Haladó beállítások
+### Advanced Settings
 
-Az alkalmazást különböző opciókkal indíthatod:
+You can start the application with various options:
 
 ```
-node index.js [opciók]
+node index.js [options]
 ```
 
-Elérhető opciók:
-- `-m, --model <model>`: A használni kívánt modell (alapértelmezett: `whisper-1`)
-- `-l, --language <language>`: Nyelv kódja (alapértelmezett: `auto`). 
-  Használj `hu` értéket magyar nyelvhez, `en` értéket angol nyelvhez, stb.
-- `-p, --prompt <prompt>`: Segítő prompt a pontosabb átirathoz
-- `-d, --debug`: Debug mód bekapcsolása
+Available options:
+- `-m, --model <model>`: The model to use (default: `whisper-1`)
+- `-l, --language <language>`: Language code (default: `auto`). 
+  Use `hu` for Hungarian, `en` for English, etc.
+- `-p, --prompt <prompt>`: Helper prompt for more accurate transcription
+- `-d, --debug`: Enable debug mode
 
-Példa:
+Example:
 ```
-node index.js --model whisper-1 --language hu --prompt "Ez egy magyar nyelvű beszélgetés"
+node index.js --model whisper-1 --language en --prompt "This is an English conversation"
 ```
 
-## Elérhető modellek
+## Available Models
 
-- `whisper-1`: OpenAI Whisper (legpontosabb)
-- `whisper-1-quantized`: OpenAI Whisper (optimalizált)
+- `whisper-1`: OpenAI Whisper (most accurate)
+- `whisper-1-quantized`: OpenAI Whisper (optimized)
 
-## Hibaelhárítás
+## Troubleshooting
 
-Ha problémába ütközöl, futtasd az alkalmazást `--debug` opcióval a részletesebb hibaüzenetek megtekintéséhez:
+If you encounter problems, run the application with the `--debug` option to see more detailed error messages:
 
 ```
 node index.js --debug
